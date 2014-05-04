@@ -3,7 +3,7 @@
 # Benjamin Kettlewell, Kyle Newton masc1013
 ###########################################################
 EXEC = a3
-CC = CC       ###  or use cc / g++ / gcc   ###
+CC = g++       ###  or use cc / g++ / gcc   ###
 
 $(EXEC):
 	$(CC) -o $(EXEC) a3.cc
