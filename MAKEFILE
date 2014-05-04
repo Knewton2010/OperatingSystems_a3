@@ -1,0 +1,15 @@
+###########################################################  Makefile
+# CS570, Spring 2014, a1
+# Benjamin Kettlewell, Kyle Newton masc1013
+###########################################################
+EXEC = a3
+CC = CC       ###  or use cc / g++ / gcc   ###
+
+$(EXEC):
+	$(CC) -o $(EXEC) a3.cc
+	rm -f *.o
+
+clean:
+	rm -f *.o $(EXEC)
+
+#######################[ EOF: Makefile ]###################
