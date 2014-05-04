@@ -21,7 +21,8 @@ int main()
 {
 	take_input();
 	forking();
-
+	
+	cout << "***************" << endl;
 	cout << "Program complete!" << endl;
 
 }
