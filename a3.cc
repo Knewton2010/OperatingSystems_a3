@@ -13,15 +13,21 @@ a3.cc */
 
 using namespace std;
 
-//#include "take_input.h"
 #include "forking.h"
 
 int main(int argc, char* argv[])
 {
+	//Default time_length
 	time_length = 6;
-	cout << time_length << endl;
 
-
+	/*
+	Error checking for arguements:
+		Only 1 arguement defaults to 6 seconds
+		Two arguements has error checking to make sure
+			that the 2nd arguement is valid
+		Three or more arguements throws an error and
+			provides the proper format
+	*/
 	if (argc > 2){
 		cout << "Too many arguements." << endl;
 		std::cerr << "Usage: " << argv[0] << " Seconds" << endl;
@@ -33,23 +39,11 @@ int main(int argc, char* argv[])
 		istringstream ss(argv[1]);
 		if (!(ss >> time_length)){
    			 cerr << "Improper Argument: " << argv[1] << '\n';
-			 cout << "Usage: a3 seconds" << endl;
+			 cout << "Usage: " << argv[0] << " seconds" << endl;
 			 return 1;
 		}
 	}
 
-	/*if (argc > 2){
-		cout << "Too many arguements." << endl;
-		std::cerr << "Usage: " << argv[0] << " Seconds" << endl;
-		return 1;
-	}
-
-	if (argc == 2){
-		time_length = atoi(argv[1]);
-		cout << time_length << endl;
-	}
-	*/
-	//take_input();
 	forking();
 
 	cout << "***************" << endl;
